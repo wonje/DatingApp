@@ -18,7 +18,7 @@ services:
     image: "datingapp-api"
     container_name: "api"
     build:
-      context: ./datingapp.API
+      context: ../datingapp.API
       dockerfile: Dockerfile
     networks:
       - datingapp-network
@@ -27,7 +27,7 @@ services:
     image: "datingapp-ui"
     container_name: "ui"
     build:
-      context: ./datingapp-SPA
+      context: ../datingapp-SPA
       dockerfile: Dockerfile
     depends_on:
       - api
